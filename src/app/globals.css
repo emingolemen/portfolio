@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased font-sans;
+  }
+}
+
+@layer utilities {
+  /* Custom typography for MassiveMusic-style aesthetic */
+  .font-display {
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    letter-spacing: -0.02em;
+  }
+}
+
