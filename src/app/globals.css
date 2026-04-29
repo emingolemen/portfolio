@@ -3,20 +3,61 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg: #FAFAF8;
+    --bg-surface: #F0ECE7;
+    --border: #E2DDD7;
+    --text-primary: #1C2333;
+    --text-secondary: #627489;
+    --accent: #314158;
+    --blob: #EDE8DF;
+  }
+
+  .dark {
+    --bg: #0D1117;
+    --bg-surface: #161B27;
+    --border: #21293B;
+    --text-primary: #E8E4DE;
+    --text-secondary: #8A9EB5;
+    --accent: #B8CCDC;
+    --blob: #1A2340;
+  }
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply antialiased font-sans;
+    background-color: var(--bg);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
 
 @layer utilities {
-  /* Custom typography for MassiveMusic-style aesthetic */
   .font-display {
     font-feature-settings: 'kern' 1, 'liga' 1;
     letter-spacing: -0.02em;
   }
-}
 
+  .text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .bg-base {
+    background-color: var(--bg);
+  }
+
+  .bg-surface {
+    background-color: var(--bg-surface);
+  }
+
+  .border-base {
+    border-color: var(--border);
+  }
+}

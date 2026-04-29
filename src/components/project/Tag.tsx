@@ -8,12 +8,15 @@ interface TagProps {
 
 export const Tag: React.FC<TagProps> = ({ children }) => {
   return (
-    <div
-      className="px-2 py-0.5 text-xs md:text-sm bg-bg-light rounded-full border border-border-light font-sans"
-      style={{ color: 'rgba(98, 116, 142, 1)', backgroundColor: '#F8FAFC' }}
+    <span
+      className="inline-block px-2.5 py-0.5 text-xs rounded-full border transition-colors duration-300"
+      style={{
+        color: 'var(--text-secondary)',
+        backgroundColor: 'var(--bg-surface)',
+        borderColor: 'var(--border)',
+      }}
     >
       {children}
-    </div>
+    </span>
   )
 }
-

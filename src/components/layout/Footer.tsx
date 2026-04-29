@@ -6,22 +6,28 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   return (
-    <footer className={`bg-gray-50 border-t border-gray-200 flex justify-center items-end ${className}`}>
-      <div className="container mx-auto px-8 py-4 max-w-[1600px] flex justify-end items-end w-full gap-4">
-        <a
-          href="https://github.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-600 hover:text-[#314158] transition-colors text-sm"
-        >
-          GitHub
-        </a>
-        <div className="flex gap-4 mt-4 md:mt-0 items-end">
+    <footer
+      className={`border-t transition-colors duration-300 ${className}`}
+      style={{ borderColor: 'var(--border)' }}
+    >
+      <div className="mx-auto px-8 py-6 max-w-[1600px] flex items-center justify-between">
+        <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+          © {new Date().getFullYear()} Emin Gölemen
+        </span>
+        <div className="flex items-center gap-5">
           <a
-            href="https://linkedin.com"
+            href="mailto:emingolemen@gmail.com"
+            className="text-sm transition-opacity hover:opacity-60"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            Email
+          </a>
+          <a
+            href="https://linkedin.com/in/emingolemen"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-[#314158] transition-colors text-sm"
+            className="text-sm transition-opacity hover:opacity-60"
+            style={{ color: 'var(--text-secondary)' }}
           >
             LinkedIn
           </a>
@@ -30,4 +36,3 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
     </footer>
   )
 }
-

@@ -19,8 +19,8 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="w-full border-b border-gray-200 last:border-b-0">
-      <ProjectSections 
+    <div className="w-full border-b last:border-b-0 transition-colors duration-300" style={{ borderColor: 'var(--border)' }}>
+      <ProjectSections
         title={project.title}
         sections={project.sections}
         tagline={project.tagline}
